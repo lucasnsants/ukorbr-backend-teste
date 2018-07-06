@@ -145,7 +145,7 @@ query {
 
 ## Execução dos testes
 
-- Acessando `container` da aplicação utilizando `docker exec -it api_web_1`
+- Acessando `container` da aplicação utilizando `docker exec -it api_web_1 bash`
 - Para executar todos os testes utilizar `yarn test`
 - Para executar um teste separadamente, basta rodar `yarn test ${nome do arquivo sem 'test.js'}`
 
