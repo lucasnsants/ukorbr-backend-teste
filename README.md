@@ -52,13 +52,13 @@ mutation {
 #### Salvando 3º Pergunta utilizando a `id` returnado após salvar o nome do usuário:
 ```
 mutation {
-  saveBirthDay(id: 3, response: "Ansioso")
+  saveResponse(id: 3, response: "Ansioso")
 }
 ```
 ```
 {
   "data": {
-    "saveBirthDay": "Resposta salva."
+    "saveResponse": "Resposta salva."
   }
 }
 ```
