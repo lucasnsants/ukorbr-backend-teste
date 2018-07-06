@@ -1,0 +1,45 @@
+# docker-compose up
+
+version: '2'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: ukorbr
+      POSTGRES_PASSWORD: ukorbr
+      PGDATA: /data/postgres
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - "5432:5432"
+      # - "3000:3000"
+    # networks:
+    #   - db
+    restart: unless-stopped
+
+  pgadmin:
+    links:
+      - db:db
+    image: fenglc/pgadmin4
+    volumes:
+       - ./data/pgadmin:/root/.pgadmin
+    ports:
+      - "5050:5050"
+    # networks:
+    #   - db
+    restart: unless-stopped
+
+  web:
+    build: .
+    ports:
+     - "3000:3000"
+    # network_mode: service:db
+    environment:
+     - POSTGRES_URI=postgres://ukorbr:ukorbr@172.20.0.2:5432/ukorbr
+    links:
+     - db
+    depends_on:
+     - db
+    volumes:
+     - .:/starter
+     - /starter/node_modules
