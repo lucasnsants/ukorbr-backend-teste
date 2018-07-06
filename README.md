@@ -13,6 +13,8 @@ API Node.js para aplicação UkorBR.
 
 E tem mais no [package.json](https://github.com/lucassant0s/ukorbr-backend-teste/blob/master/package.json) do projeto.
 
+Live Code -> https://backend-testt.herokuapp.com/graphiql
+
 ## Instalação
 
 * Clone o repositório: `git clone git@github.com:lucassant0s/ukorbr-backend-teste.git`
