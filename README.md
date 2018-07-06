@@ -143,6 +143,12 @@ query {
 }
 ```
 
+## Execução dos testes
+
+- Acessando `container` da aplicação utilizando `docker exec -it api_web_1`
+- Para executar todos os testes utilizar `yarn test`
+- Para executar um teste separadamente, basta rodar `yarn test ${nome do arquivo sem 'test.js'}`
+
 ## About
 
 Lucas N. Santos - http://twitter.com/lucasnst
