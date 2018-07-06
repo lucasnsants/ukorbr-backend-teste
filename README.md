@@ -145,6 +145,10 @@ query {
 }
 ```
 
+## Utilizando PgAdmin v4
+
+Através do link `http://0.0.0.0:5000` utilizando usuário: `pgadmin4@pgadmin.org` e senha `admin` podemos ter total acesso ao banco de dados por uma UI.
+
 ## Execução dos testes
 
 - Acessando `container` da aplicação utilizando `docker exec -it api_web_1 bash`
